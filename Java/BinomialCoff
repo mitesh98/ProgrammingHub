@@ -1,0 +1,22 @@
+import java.io.*;
+import java.util.*;
+public class BinomialCoff
+{
+	public static int binomial(int n,int k) 
+	{
+		if(n==k||k==0)
+			return 1;
+		else
+			return binomial(n-1,k)+binomial(n-1,k-1);
+	}
+	public static void main(String[] args) 
+	{
+		Scanner in=new Scanner(System.in);
+		//System.out.println("Enter no of testcase");
+		int t=in.nextInt();
+	
+			int n=in.nextInt();
+			int k=in.nextInt();
+			System.out.println(binomial(n,k));
+	}
+}
